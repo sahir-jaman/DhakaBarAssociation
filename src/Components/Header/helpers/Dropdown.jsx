@@ -10,21 +10,21 @@ export default function DropDown({ item }) {
       key={item.title}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative"
+      className="relative text-[20px]"
     >
-      <a className="flex gap-1 items-center" to={item.link}>
+      <a className="flex gap-1 items-center hover:text-[red] cursor-pointer" to={item.link}>
         {item.title}{" "}
         {item.children &&
           (isHovered ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />)}
       </a>
       {item.children && isHovered && (
         <ul
-          className="absolute top-full left-0 bg-blue-900 shadow-lg p-2"
+          className="absolute top-full left-0 bg-[#171C49] shadow-lg p-2 pt-5"
           style={{ minWidth: `${item.title.length * 8}px` }}
         >
           {item.children.map((childItem, index) => (
-            <li key={index}>
-              <a href={childItem.link}>{childItem.title}</a>
+            <li key={index} className="pb-5">
+              <a className="hover:text-[red]" href={childItem.link}>{childItem.title}</a>
             </li>
           ))}
         </ul>

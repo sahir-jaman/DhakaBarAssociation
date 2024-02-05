@@ -28,7 +28,7 @@ export default function MobileDropDown({ item }) {
     <li key={item.title} ref={dropdownRef} className="relative">
       <a
         onClick={() => toggleDropDown()}
-        className="flex gap-1 items-center"
+        className="flex gap-1 items-center hover:text-[red] cursor-pointer"
         href={item.link}
       >
         {item.title}{" "}
@@ -37,11 +37,11 @@ export default function MobileDropDown({ item }) {
       </a>
       {item.children && isOpened && (
         <ul
-          className="bg-blue-900 shadow-lg p-2"
+          className="bg-[#171C49] shadow-lg p-2"
           style={{ minWidth: `${item.title.length * 8}px` }}
         >
           {item.children.map((childItem, index) => (
-            <li key={index}>
+            <li key={index} className="hover:text-[red]">
               <a href={childItem.link}>{childItem.title}</a>
             </li>
           ))}

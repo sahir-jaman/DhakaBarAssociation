@@ -65,11 +65,11 @@ const menuOptions = [
         title: "Travel",
         link: "/travel",
       },
-      {
-        title: "Longer Menu Item Title for Testing",
-        link: "/longer-menu-item",
-      },
     ],
+  },
+  {
+    title: "Contact",
+    link: "/contact",
   },
 ];
 
@@ -104,7 +104,7 @@ function Header() {
           <h3 className="text-white lg:text-[20px] text-[10px] lg:pt-[0px] pt-2 lg:font-bold">
             Broadcast Producers Association
           </h3>
-          <div id="links" className="flex gap-3 my-auto">
+          <div id="links" className="flex gap-3 my-auto ">
             {/* Mapping social media icons and links */}
             {socialLinks.map((socialLink, index) => (
               <a key={index} href={socialLink.link}>
