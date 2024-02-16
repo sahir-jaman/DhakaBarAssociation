@@ -22,7 +22,7 @@ export default function DesktopNavbar({ menuOptions }) {
         </div>
       </div>
       <div className="bg-[#171C49] text-white py-4">
-        <div className="flex justify-center ">
+        <div className="flex justify-center">
           <ul className="none lg:flex gap-5">
             {menuOptions.map((item) => (
               <DropDown key={item.title} item={item} />

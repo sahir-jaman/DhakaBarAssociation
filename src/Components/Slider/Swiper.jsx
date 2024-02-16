@@ -1,4 +1,5 @@
-
+// import React, { useRef, useState } from "react";
+// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -37,7 +38,7 @@ const heroData = [
   }
 ];
 
-function Slider() {
+export default function App() {
   return (
     <>
       <div className="container mx-auto">
@@ -52,16 +53,23 @@ function Slider() {
           }}
         >
           {heroData.map((item, index) => (
-            <SwiperSlide key={index} className="sm:w-full md:flex lg:flex h-full md:h-[470px] lg:h-[600px] justify-between">
+            <SwiperSlide
+              key={index}
+              className=" block sm:w-full md:flex lg:flex h-full md:h-[470px] lg:h-[600px] justify-between"
+            >
               <div className="w-full md:w-[55%] lg:w-[55%] h-[380px] lg:h-100% lg:ml-6">
-                <img src={item.image} className="w-full md:w-[900px] lg:w-[900px] h-[380px] md:h-[470px] lg:h-[600px] object-cover" alt="slider image"/>
+                <img
+                  src={item.image}
+                  className="w-full md:w-[900px] lg:w-[900px] h-[380px] md:h-[470px] lg:h-[600px] object-cover"
+                  alt=""
+                />
               </div>
               <div className="p-8 flex items-center w-full md:w-[45%] lg:w-[45%]">
                 <div className="">
                   <h2 className="text-2xl lg:text-4xl font-bold my-6 leading-normal">
                     {item.title}
                   </h2>
-                  <p className="lg:text-[23px] text-[16px] text-justify">{item.description.slice(0, 380)} <span className="text-[#007bff]"> read more...</span></p>
+                  <p className="text-[23px] text-justify">{item.description.slice(0, 380)} <span className="text-[#007bff]"> read more...</span></p>
                 </div>
               </div>
             </SwiperSlide>
@@ -69,7 +77,5 @@ function Slider() {
         </Swiper>
       </div>
     </>
-  )
+  );
 }
-
-export default Slider

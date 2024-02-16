@@ -19,7 +19,7 @@ export default function DropDown({ item }) {
       </a>
       {item.children && isHovered && (
         <ul
-          className="absolute top-full left-0 bg-[#171C49] shadow-lg p-2 pt-5"
+          className="absolute top-full left-0 bg-[#171C49] shadow-lg p-2 pt-5 z-50"
           style={{ minWidth: `${item.title.length * 8}px` }}
         >
           {item.children.map((childItem, index) => (
