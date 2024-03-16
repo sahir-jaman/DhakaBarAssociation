@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default function DropDown({ item }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -10,13 +11,16 @@ export default function DropDown({ item }) {
       key={item.title}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="relative text-[20px]"
+      className="relative text-[19px]"
     >
-      <a className="flex gap-1 items-center hover:text-[red] cursor-pointer" to={item.link}>
+      <Link
+        className="flex gap-1 items-center hover:text-[red] cursor-pointer"
+        to={item.link}
+      >
         {item.title}{" "}
         {item.children &&
           (isHovered ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />)}
-      </a>
+      </Link>
       {item.children && isHovered && (
         <ul
           className="absolute top-full left-0 bg-[#171C49] shadow-lg p-2 pt-5 z-50"
@@ -24,7 +28,9 @@ export default function DropDown({ item }) {
         >
           {item.children.map((childItem, index) => (
             <li key={index} className="pb-5">
-              <a className="hover:text-[red]" href={childItem.link}>{childItem.title}</a>
+              <a className="hover:text-[red]" href={childItem.link}>
+                {childItem.title}
+              </a>
             </li>
           ))}
         </ul>

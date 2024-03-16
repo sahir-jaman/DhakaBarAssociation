@@ -23,13 +23,6 @@ const heroData = [
       "https://images.pexels.com/photos/2559941/pexels-photo-2559941.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
-    title: "BPA President Meets Dubai Chamber President",
-    description:
-      "Businesses and Entrepreneurs of the United Arab Emirates (UAE) are interested in investing in Bangladesh and hiring skilled manpower from the country. Mahbubul Alam, the President of the Federation of Bangladesh Chambers of Commerce and Industry (BPA), the apex trade organization of the country, assures all kinds of support to the investors of UAE in this regard. Mahbubul Alam, President of the BPA, and Mohammad Ali Rashed Lootah, President and CEO of the Dubai Chamber of Commerce discussed the issues during a meeting held recently in Dubai, UAE. The discussions revolved around enhancing economic collaboration between Bangladesh and the United Arab Emirates (UAE). Businesses and Entrepreneurs of the United Arab Emirates (UAE) are interested in investing in Bangladesh and hiring skilled manpower from the country. Mahbubul Alam, the President of the Federation of Bangladesh Chambers of Commerce and Industry (BPA), the apex trade organization of the country, assures all kinds of support to the investors of UAE in this regard. Mahbubul Alam, President of the BPA, and Mohammad Ali Rashed Lootah, President and CEO of the Dubai Chamber of Commerce discussed the issues during a meeting held recently in Dubai, UAE. The discussions revolved around enhancing economic collaboration between Bangladesh and the United Arab Emirates (UAE).",
-    image:
-      "https://fbcci.org/public/storage/upload/slider/240128072306-8770.png",
-  },
-  {
     title:"Government controlling media by different ways",
     description:"The government is controlling the media in various ways. The mainstream media that are trying to work impartially are being subjected to various obstacles. Freedom of media could not be ensured if rule of law is not established through a fair election in the country. The government is controlling the media in various ways. The mainstream media that are trying to work impartially are being subjected to various obstacles. Freedom of media could not be ensured if rule of law is not established through a fair election in the country. The government is controlling the media in various ways. The mainstream media that are trying to work impartially are being subjected to various obstacles. Freedom of media could not be ensured if rule of law is not established through a fair election in the country.",
     image:
@@ -52,16 +45,16 @@ function Slider() {
           }}
         >
           {heroData.map((item, index) => (
-            <SwiperSlide key={index} className="sm:w-full md:flex lg:flex h-full md:h-[470px] lg:h-[600px] justify-between">
+            <SwiperSlide key={index} className="sm:w-full md:flex lg:flex h-full md:h-[470px] lg:h-[450px] justify-between">
               <div className="w-full md:w-[55%] lg:w-[55%] h-[380px] lg:h-100% lg:ml-6">
-                <img src={item.image} className="w-full md:w-[900px] lg:w-[900px] h-[380px] md:h-[470px] lg:h-[600px] object-cover" alt="slider image"/>
+                <img src={item.image} className="w-full md:w-[900px] lg:w-[900px] h-[380px] md:h-[470px] lg:h-[450px] object-cover" alt="slider image"/>
               </div>
               <div className="p-8 flex items-center w-full md:w-[45%] lg:w-[45%]">
                 <div className="">
-                  <h2 className="text-2xl lg:text-4xl font-bold my-6 leading-normal">
+                  <h2 className="text-2xl lg:text-3xl font-bold my-6 leading-normal">
                     {item.title}
                   </h2>
-                  <p className="lg:text-[23px] text-[16px] text-justify">{item.description.slice(0, 380)} <span className="text-[#007bff]"> read more...</span></p>
+                  <p className="lg:text-[18px] text-[16px] text-justify">{item.description.slice(0, 380)} <span className="text-[#007bff]"> read more...</span></p>
                 </div>
               </div>
             </SwiperSlide>

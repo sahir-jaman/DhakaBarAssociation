@@ -75,23 +75,23 @@ const menuOptions = [
 
 const socialLinks = [
   {
-    icon: <FaFacebookSquare className="text-white text-[25px] pt-2" />,
+    icon: <FaFacebookSquare className="text-white text-[25px] pt-2 hover:text-[red]" />,
     link: "facebook-link",
   },
   {
-    icon: <FiInstagram className="text-white text-[25px] pt-2" />,
+    icon: <FiInstagram className="text-white text-[25px] pt-2 hover:text-[red]" />,
     link: "instagram-link",
   },
   {
-    icon: <FaTwitter className="text-white text-[25px] pt-2" />,
+    icon: <FaTwitter className="text-white text-[25px] pt-2 hover:text-[red]" />,
     link: "twitter-link",
   },
   {
-    icon: <FaLinkedin className="text-white text-[25px] pt-2" />,
+    icon: <FaLinkedin className="text-white text-[25px] pt-2 hover:text-[red]" />,
     link: "linkedin-link",
   },
   {
-    icon: <FaYoutube className="text-white text-[25px] pt-2" />,
+    icon: <FaYoutube className="text-white text-[25px] pt-2 hover:text-[red]" />,
     link: "youtube-link",
   },
 ];
@@ -107,7 +107,7 @@ function Header() {
           <div id="links" className="flex gap-3 my-auto ">
             {/* Mapping social media icons and links */}
             {socialLinks.map((socialLink, index) => (
-              <a key={index} href={socialLink.link}>
+              <a key={index} href={socialLink.link} className="hover:text-[red]">
                 {socialLink.icon}
               </a>
             ))}
