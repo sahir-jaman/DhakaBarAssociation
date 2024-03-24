@@ -58,14 +58,14 @@ function Membership_form() {
   
 
   return (
-    <div className="max-w-[80%] mx-auto mt-1 pb-10">
+    <div className="max-w-[80%] mx-auto mt-1 pb-10 bg-[#ECECEB]">
       <div className="flex justify-center">
-        <h1 className="text-[22px] text-[#171C49] bg-red-400 rounded-lg px-3 pb-1">Please fulfill the membership form</h1>
+        <h1 className="text-[22px] text-[#171C49] bg-[#c9c9c3] border border-red-500 rounded-lg px-3 pb-1">Please fulfill the membership form</h1>
       </div>
       <form onSubmit={handleSubmit}>
         <fieldset className="md:flex justify-between">
           {/* Personal info */}
-          <div>
+          <div className="ml-2">
             <h1 className="text-[red] text-[18px]">Personal Information</h1>
             <div className="Field pb-2">
               <label>Name <sup className="text-[18px] text-[red]">*</sup></label>
@@ -188,7 +188,7 @@ function Membership_form() {
 
 
           {/* Professional info */}
-          <div>
+          <div className="mr-2">
           <h1 className="text-[red] text-[18px]">Professional Information</h1>
             <div className="Field pb-2">
               <label className="pr-2">Membership Number</label>
@@ -279,7 +279,7 @@ function Membership_form() {
 
         </fieldset>
           <div className="md:flex">
-            <button type="submit" className="bg-red-400 text-[#171C49] rounded-lg px-3 pb-1 mt-2">
+            <button type="submit" className="bg-red-400 text-[#171C49] rounded-lg px-3 pb-1 mt-2 ml-2">
               Create account
             </button>
             <div className="md:pt-2 md:pl-5">

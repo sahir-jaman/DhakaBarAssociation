@@ -46,11 +46,11 @@ const menuOptions = [
     children: [
       {
         title: "All Members",
-        link: "all-members",
+        link: "/all-members",
       },
       {
         title: "Membership Form",
-        link: "membership-form",
+        link: "/membership-form",
       },
     ],
   },

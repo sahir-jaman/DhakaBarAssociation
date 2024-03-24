@@ -6,6 +6,8 @@ import Constitution from "./Components/About/Constitution";
 import Header from "./Components/Header/Header";
 import Membership_form from "./Components/Members/Membership_form"
 import All_members from "./Components/Members/All_members";
+import Member_detail from "./Components/Members/Member_detail";
+import Contact from "./Components/Contact/Contact";
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path="/constitution" element={<Constitution/>} />
           <Route path="/membership-form" element={ <Membership_form/>} />
           <Route path="/all-members" element={ <All_members/>} />
+          <Route path="/member-detail/:memberId" element={<Member_detail />} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>  
       </BrowserRouter>
     </>

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function All_members() {
   const [memberList, setMemberList] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const navigate = useNavigate(); // Get the navigate function from react-router-dom
 
   useEffect(() => {
     const fetchMemberList = async () => {
@@ -21,6 +23,11 @@ function All_members() {
 
     fetchMemberList();
   }, []);
+
+  const handleMemberDetail = (memberId) => {
+    // Navigate to the Member_detail page with memberId as a parameter
+    navigate(`/member-detail/${memberId}`);
+  };
 
   if (loading) {
     return <div>Loading...</div>;
@@ -44,7 +51,8 @@ function All_members() {
                 <h3>{member.name}</h3>
                 <h3>{member.email}</h3>
                 <div className="bg-[gray] mt-3">
-                  <button className="text-white hover:text-yellow-500">Details</button>
+                  {/* Pass member.id to handleMemberDetail */}
+                  <button onClick={() => handleMemberDetail(member.id)} className="text-white hover:text-yellow-500">Details</button>
                 </div>
               </div>
             </div>
