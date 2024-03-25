@@ -16,7 +16,7 @@ function Member_detail() {
   useEffect(() => {
     const fetchMemberDetails = async () => {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/members/${memberId}`);
+        const response = await axios.get(`https://oyster-app-jzgsj.ondigitalocean.app/api/members/${memberId}`);
         setMemberDetails(response.data);
         setLoading(false);
         console.log("My target member", response);

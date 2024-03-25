@@ -47,7 +47,7 @@ function Membership_form() {
       for (const key in formData) {
         formDataToSend.append(key, formData[key]);
       }
-      await axios.post("http://127.0.0.1:8000/api/members", formDataToSend);
+      await axios.post("https://oyster-app-jzgsj.ondigitalocean.app/api/members", formDataToSend);
       setRegistrationStatus("Successfully registered.");
       setFormData(initialConstate);
     } catch (error) {

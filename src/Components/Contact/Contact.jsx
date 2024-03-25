@@ -54,7 +54,7 @@ const Contact = () => {
             ref={form}
             onSubmit={sendEmail}
           >
-            <div className="w-full lg:w-11/12 my-5 ">
+            <div className="w-full lg:w-11/12 my-5 border border-gray-500">
               <input
                 id="fullName"
                 className="w-full p-3 placeholder-black"
@@ -63,7 +63,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="w-full lg:w-11/12 my-5 text-black">
+            <div className="w-full lg:w-11/12 my-5 text-black border border-gray-500">
               <input
                 id="email_id"
                 label="Your Email"
@@ -73,7 +73,7 @@ const Contact = () => {
                 required
               />
             </div>
-            <div className="w-full lg:w-11/12 my-5 ">
+            <div className="w-full lg:w-11/12 my-5 border border-gray-500">
               <textarea
                 id="message"
                 label="Message"
