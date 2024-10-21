@@ -11,7 +11,7 @@ function All_members() {
   useEffect(() => {
     const fetchMemberList = async () => {
       try {
-        const response = await axios.get("https://oyster-app-jzgsj.ondigitalocean.app/api/members");
+        const response = await axios.get("http://localhost:8000/api/members/"); 
         setMemberList(response.data);
         setLoading(false);
         console.log("here is the reponse member", response);

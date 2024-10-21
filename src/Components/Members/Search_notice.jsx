@@ -27,7 +27,7 @@ function Search_notice() {
 
       {/* Notice Part  */}
       <div className="bg-[#ECECEB]">
-        <h1 className="mt-10 mb-4 text-[22px]">Notice</h1>
+        <h1 className="mt-10 mb-4 text-[22px]">Circular</h1>
         <div>
           <div className="flex mb-4">
             <div className="w-[200px] h-[80px] border-[gray] rounded-md overflow-hidden">

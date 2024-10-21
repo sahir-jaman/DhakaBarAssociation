@@ -12,7 +12,7 @@ export default function DesktopNavbar({ menuOptions }) {
             className="h-[80px] pt-5"
           />
           <h1 className="max-w-[450px] text-center pt-5 font-bold text-[20px]">
-            THE FEDERATION OF BANGLADESH CHAMBERS OF COMMERCE & INDUSTRY
+          THE PREMIER NETWORK FOR ACTORS AND DIRECTORS, POWERFULLY LINKED
           </h1>
           <img
             src="https://fbcci.org/public/storage/upload/conf/230626102847-15065.jpeg"

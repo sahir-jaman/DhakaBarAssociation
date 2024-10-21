@@ -14,7 +14,7 @@ function About() {
   return (
     <div>
       <h1 className="text-2xl max-w-[90%] mx-auto px-2">
-        About Broadcast Producers Association
+        About Actor Link Association
       </h1>
       <div className="max-w-[90%] mx-auto lg:flex">
         <div className="first px-2 py-2 lg:w-4/5 mr-4 bg-[#ECECEB]">
@@ -27,22 +27,9 @@ function About() {
           </div>
           <div className="pt-4">
             <p className="text-justify">
-              The Dhaka Bar Association is one of the leading & renounced Bar
-              Association. After getting the establishment in 28 January 1889
-              A.D. It is holdings an important role up to date to establish the
-              rules of law and establish the perfect or accurate judgment in
-              between of facing to much difficulties. This association created
-              the specie role to remain sighing of Bangladesh at the
-              international world. This bar association make the role of
-              forwardness against each & every works of interest individually.
-              Besides this all of Gono Andolon. This bar association fail on the
-              road and play the role to get the legal rights as faster. The role
-              of Dhaka Bar Association at the period of Vasa Andolon in the year
-              of 1952 A.D. was various glorious. Except this, the learned
-              members of this association participated in the ware of 1971 A.D.
-              as freedom-fighter which are supported by the learned advocates of
-              this association were given veto as firstly safe from the black
-              hands of the country and the hands from the enemy of the abroad.
+            Actor Link Association (ALC) stands as a pioneering platform for the creative industry, bridging the gap between actors and directors across the globe. Since its inception, ALC has played a crucial role in promoting the artistic exchange and collaboration necessary for the entertainment world to thrive. Like Dhaka Bar Association's contribution to justice, ALC fosters talent, offering actors—from seasoned professionals to emerging talents—an opportunity to connect directly with directors, streamlining casting processes and nurturing creative partnerships.
+
+            Committed to excellence, ALC ensures that every actor has the platform to showcase their talent, while directors can access diverse profiles to match their project needs. Much like the historical significance of cultural movements, ALC plays a vital role in driving innovation within the entertainment industry, supporting the growth of both local and international projects, and advocating for creative freedom and expression.
             </p>
             <div className=" pt-5">
               <h1 className="text-lg mb-1 text-blue-600">Share Now</h1>

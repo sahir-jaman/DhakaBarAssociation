@@ -8,6 +8,9 @@ import Membership_form from "./Components/Members/Membership_form"
 import All_members from "./Components/Members/All_members";
 import Member_detail from "./Components/Members/Member_detail";
 import Contact from "./Components/Contact/Contact";
+import EventPage from "./Components/Events/events";
+import MediaPage from "./Components/Media/MediaPage";
+import BroadcastFairPage from "./Components/Media/BroadCastFairPage";
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
           <Route path="/all-members" element={ <All_members/>} />
           <Route path="/member-detail/:memberId" element={<Member_detail />} />
           <Route path="/contact" element={<Contact/>} />
+          <Route path="/events" element={<EventPage/>} />
+          <Route path="/media" element={<MediaPage/>} />
+          <Route path="/broadcast-fair" element={<BroadcastFairPage/>} />
         </Routes>  
       </BrowserRouter>
     </>

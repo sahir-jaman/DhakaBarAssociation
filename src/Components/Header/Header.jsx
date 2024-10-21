@@ -16,19 +16,19 @@ const menuOptions = [
     title: "About Us",
     children: [
       {
-        title: "About BPA",
+        title: "About ALC",
         link: "/about-bpa",
       },
       {
-        title: "Constitution",
+        title: "Organization",
         link: "/constitution",
       },
     ],
   },
-  {
-    title: "Organization",
-    link: "organization",
-  },
+  // {
+  //   title: "Organization",
+  //   link: "organization",
+  // },
   {
     title: "Events",
     link: "/events",
@@ -54,19 +54,19 @@ const menuOptions = [
       },
     ],
   },
-  {
-    title: "Professional Development",
-    children: [
-      {
-        title: "Relations",
-        link: "/relations",
-      },
-      {
-        title: "Travel",
-        link: "/travel",
-      },
-    ],
-  },
+  // {
+  //   title: "Professional Development",
+  //   children: [
+  //     {
+  //       title: "Relations",
+  //       link: "/relations",
+  //     },
+  //     {
+  //       title: "Travel",
+  //       link: "/travel",
+  //     },
+  //   ],
+  // },
   {
     title: "Contact",
     link: "/contact",
@@ -102,7 +102,7 @@ function Header() {
       <div id="usefulLinks" className="h-[40px] bg-[#171C49]">
         <div className="max-w-[90%] mx-auto flex justify-between">
           <h3 className="text-white lg:text-[20px] text-[10px] lg:pt-[0px] pt-2 lg:font-bold">
-            Broadcast Producers Association
+            Actor Link Association
           </h3>
           <div id="links" className="flex gap-3 my-auto ">
             {/* Mapping social media icons and links */}

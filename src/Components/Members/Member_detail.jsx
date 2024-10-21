@@ -16,13 +16,14 @@ function Member_detail() {
   useEffect(() => {
     const fetchMemberDetails = async () => {
       try {
-        const response = await axios.get(`https://oyster-app-jzgsj.ondigitalocean.app/api/members/${memberId}`);
+        const response = await axios.get(`http://localhost:8000/api/members/${memberId}`);
+        console.log("API Response:", response.data); // Log the response data
         setMemberDetails(response.data);
         setLoading(false);
-        console.log("My target member", response);
       } catch (error) {
         setError("Failed to fetch member details. Please try again later.");
         setLoading(false);
+        console.error("Error fetching member details:", error); // Log the error
       }
     };
 
@@ -49,54 +50,53 @@ function Member_detail() {
         <div id="first" className="m-3 bg-[] w-[90%] bg-[#ECECEB]">
           <h1 className="text-center text-xl mt-1.5">Profile</h1>
           <div className="mx-auto md:max-w-[10%] max-w-[20%] pt-3">
-            <img src={memberDetails[0].avatar} alt="Avatar" className="w-20 h-20 rounded-full mr-4" />
+            <img src={memberDetails.avatar} alt="Avatar" className="w-20 h-20 rounded-full mr-4" />
           </div>
           <div className="text-center py-3">
-            <h2 className="text-xl font-semibold">{memberDetails[0].name}</h2>
+            <h2 className="text-xl font-semibold">{memberDetails.name}</h2>
             <h2>A Proud Member of Dhaka BAR Association</h2>
           </div>
           
           <div className="md:flex md:flex-cols-4 grid grid-cols-2 justify-between">
-            <p className="flex"> <IoCallSharp className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails[0].mobile_no}</p>
-            <p className="flex"> <MdEmail className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails[0].mobile_no}</p>
-            <p className="flex"> <MdOutlineBloodtype className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails[0].mobile_no}</p>
-            <p className="flex md:mr-1"> <FaWhatsapp className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails[0].mobile_no}</p>
+            <p className="flex"> <IoCallSharp className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails.mobile_no}</p>
+            <p className="flex"> <MdEmail className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails.email}</p>
+            <p className="flex"> <MdOutlineBloodtype className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails.blood_group}</p>
+            <p className="flex md:mr-1"> <FaWhatsapp className=" mt-1.5 ml-1 mr-1 bg-blue-200 rounded-[100%] p-0.5"/>{memberDetails.mobile_no}</p>
           </div>
           
-
           <h1 className="text-center text-[20px] py-4">Bio Info</h1>
           <div className="flex justify-between mx-1">
             <div>
               <h1>Personal Information</h1>
               <div>
-                <p>Gender: {memberDetails[0].gender}</p>
-                <p>Blood Group: {memberDetails[0].blood_group}</p>
-                <p>Father Name: {memberDetails[0].father_name}</p>
-                <p>Mother Name: {memberDetails[0].mother_name}</p>
-                <p>NID Number: {memberDetails[0].nid_no}</p>
-                <p>Mobile Number: {memberDetails[0].mobile_no}</p>
-                <p>Present Address: {memberDetails[0].present_address}</p>
-                <p>Permanent Address: {memberDetails[0].permanent_address}</p>
+                <p>Gender: {memberDetails.gender}</p>
+                <p>Blood Group: {memberDetails.blood_group}</p>
+                <p>Father Name: {memberDetails.father_name}</p>
+                <p>Mother Name: {memberDetails.mother_name}</p>
+                <p>NID Number: {memberDetails.nid_no}</p>
+                <p>Mobile Number: {memberDetails.mobile_no}</p>
+                <p>Present Address: {memberDetails.present_address}</p>
+                <p>Permanent Address: {memberDetails.permanent_address}</p>
               </div>
             </div>
             <div>
               <h1>DBA Information</h1>
               <div>
-                <p>Membership Number: {memberDetails[0].membership_no}</p>
-                <p>Membership Date: {memberDetails[0].membership_date}</p>
-                <p>Membership Category: {memberDetails[0].membership_category}</p>
-                <p>Nominee Name: {memberDetails[0].nominee_name}</p>
-                <p>Nominee Relation: {memberDetails[0].nominee_relation}</p>
-                <p>Nominee Date of Birth: {memberDetails[0].nominee_dob}</p>
-                <p>Present Job: {memberDetails[0].present_job}</p>
-                <p>Professional Skills: {memberDetails[0].professional_skills}</p>
-                <p>Chamber Address: {memberDetails[0].chamber_address}</p>
+                <p>Membership Number: {memberDetails.membership_no}</p>
+                <p>Membership Date: {memberDetails.membership_date}</p>
+                <p>Membership Category: {memberDetails.membership_category}</p>
+                <p>Nominee Name: {memberDetails.nominee_name}</p>
+                <p>Nominee Relation: {memberDetails.nominee_relation}</p>
+                <p>Nominee Date of Birth: {memberDetails.nominee_dob}</p>
+                <p>Present Job: {memberDetails.present_job}</p>
+                <p>Professional Skills: {memberDetails.professional_skills}</p>
+                <p>Chamber Address: {memberDetails.chamber_address}</p>
               </div>
             </div>
           </div>
         </div>
         <div id="second" className="m-3 flex-grow">
-          <Search_notice/>
+          <Search_notice />
         </div>
       </div>
     </div>
