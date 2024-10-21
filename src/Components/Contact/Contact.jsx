@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, Toaster } from "react-hot-toast";
+import Main_footer from "../Footer/Main_footer";
 
 const Contact = () => {
   const form = useRef();
@@ -100,3 +101,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
+Main_footer

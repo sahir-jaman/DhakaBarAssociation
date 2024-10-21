@@ -21,7 +21,7 @@ function Main_footer() {
         <div className="w-[90%] mx-auto pt-10">
           <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4 bg-[#374151] justify-items-center ">
             <div>
-              <FooterTitle title="Broadcast Producers Association" />
+              <FooterTitle title="Actor Link Association" />
               <FooterLinkGroup col className="flex flex-col">
                 <FooterLink href="#">About</FooterLink>
                 <FooterLink href="#">Careers</FooterLink>
